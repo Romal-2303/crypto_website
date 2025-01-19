@@ -1,0 +1,158 @@
+@use "../../../designSystem/library" as *;
+
+.feature-section-container {
+  position: relative;
+  margin-top: 6rem;
+  font-family: $font-tertiary;
+  padding: 3rem;
+  // background: linear-gradient(
+  //   131deg,
+  //   rgba(21, 212, 107, 0.3) 1%,
+  //   rgba(255, 255, 255, 0) 100%
+  // );
+
+  .section-content {
+    position: relative;
+    display: flex;
+    align-items: start;
+    height: fit-content;
+    overflow: hidden;
+
+    .content-header {
+      position: relative;
+      font-size: 44px;
+      color: white;
+      line-height: 54px;
+      letter-spacing: 2px;
+      width: fit-content;
+      z-index: 13;
+      flex: 0.6;
+
+      span {
+        color: $primary-200;
+      }
+    }
+
+    // .content-header::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 50%;
+    //   right: 0%;
+    //   width: 90px;
+    //   height: 90px;
+    //   transform: translate(0%, -50%);
+    //   background: radial-gradient(
+    //     circle,
+    //     rgba(21, 212, 107, 0.8) 0%,
+    //     rgba(0, 255, 0, 0) 70%
+    //   );
+    //   border-radius: 50%;
+    //   z-index: -1;
+    //   animation: pulse 2s infinite ease-in-out;
+    // }
+
+    @keyframes pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.7;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .content-desc {
+      flex: 1;
+      color: $gray-700;
+      font-size: 14px;
+      line-height: 24px;
+      padding-top: 0.2rem;
+      letter-spacing: 0.8px;
+      word-spacing: 1px;
+    }
+  }
+
+  .graphs-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 6rem;
+    height: 120px;
+    width: calc(100vw - 6rem);
+    overflow: scroll;
+
+    .card-container {
+      width: 600px;
+      padding: 1rem;
+      background-color: #272727;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      gap: 1rem;
+
+      .coin-price-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: fit-content;
+        .coin-name {
+          color: $gray-100;
+        }
+
+        .coin-price {
+          margin-top: 0.6rem;
+        }
+      }
+
+      .chart-container {
+      }
+    }
+  }
+
+  .features-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+    height: 150px;
+    overflow-x: scroll;
+
+    .card-container {
+      width: 33%;
+      padding: 1rem;
+      background-color: #272727;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 12px;
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .icon-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 35px;
+          width: 35px;
+          background-color: $primary-300;
+          border-radius: 50%;
+        }
+
+        .heading {
+          font-size: 24px;
+        }
+      }
+
+      .card-desc {
+        margin-top: 2rem;
+        color: $gray-600;
+      }
+    }
+  }
+}

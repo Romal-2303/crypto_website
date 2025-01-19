@@ -1,0 +1,21 @@
+@use "./library" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-100;
+}
+
+::-moz-selection {
+  color: $primary-100;
+  background: white;
+}
+
+::selection {
+  color: $primary-100;
+  background: white;
+}

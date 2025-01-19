@@ -1,0 +1,31 @@
+@use "../../../../designSystem/library" as *;
+
+.number-section-container {
+  margin-top: 6rem;
+  width: 40%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+
+  .user-container,
+  .coverage-container,
+  .interest-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .number {
+      font-size: 34px;
+    }
+
+    .desc {
+      color: $primary-200;
+      font-size: 14px;
+      margin-top: 0.2rem;
+    }
+  }
+}

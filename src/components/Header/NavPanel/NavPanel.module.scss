@@ -1,0 +1,33 @@
+@use "../../../designSystem/library" as *;
+
+.navigation-panel {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 25px;
+  font-family: $font-secondary;
+  position: relative;
+  z-index: 12;
+
+  .link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none;
+    color: $gray-100;
+    padding: 0.6rem 1rem;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+
+    svg {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+
+  .link-container-active {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.061);
+  }
+}
