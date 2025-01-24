@@ -162,3 +162,24 @@
     }
   }
 }
+
+.dots-block-container {
+  position: absolute;
+  bottom: 2rem;
+  right: 4rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  gap: 3rem;
+  column-gap: 6rem;
+
+  // border: 1px solid red;
+
+  .dot {
+    height: 3px;
+    width: 3px;
+    background-color: $gray-100;
+    border-radius: 100%;
+  }
+}

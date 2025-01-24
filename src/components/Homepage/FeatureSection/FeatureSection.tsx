@@ -1,32 +1,12 @@
 "use client";
 
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
 import classes from "./FeatureSection.module.scss";
 import styles from "../../../designSystem/_classes.module.scss";
 import DollarIcon from "@/assets/icons/DollarIcon";
 import LightningIcon from "@/assets/icons/LightningIcon";
 import ShieldIcon from "@/assets/icons/ShieldIcon";
 import ArrowWithTail from "@/assets/icons/ArrowWithTail";
-import { Line } from "react-chartjs-2";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+import LineChart from "@/components/Charts/LineChart/LineChart";
 
 let coinArr = [
   { coin: "Bitcoin", price: "$80,00,000.12" },
@@ -138,14 +118,14 @@ const FeatureSection = () => {
               <p className={classes["coin-price"]}>{coin.price}</p>
             </div>
             <div className={classes["chart-container"]}>
-              <Line options={options} data={data} />
+              <LineChart options={options} data={data} />
             </div>
           </div>
         ))}
       </div>
       <div className={classes["features-container"]}>
-        {featuresArr.map((feature) => (
-          <div className={classes["card-container"]}>
+        {featuresArr.map((feature, index) => (
+          <div key={index} className={classes["card-container"]}>
             <div className={classes["card-header"]}>
               <div className={classes["icon-container"]}>{feature.icon}</div>
               <p className={classes["heading"]}>{feature.header}</p>

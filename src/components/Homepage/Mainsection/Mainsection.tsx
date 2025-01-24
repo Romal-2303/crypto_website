@@ -47,6 +47,14 @@ const Mainsection = () => {
           <div className={classes["dot-1"]}></div>
         </div>
       </div>
+
+      <div className={classes["dots-block-container"]}>
+        {Array(20)
+          .fill(0)
+          .map((el) => (
+            <div className={classes["dot"]}></div>
+          ))}
+      </div>
     </>
   );
 };
