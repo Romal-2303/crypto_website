@@ -51,8 +51,8 @@ const Mainsection = () => {
       <div className={classes["dots-block-container"]}>
         {Array(20)
           .fill(0)
-          .map((el) => (
-            <div className={classes["dot"]}></div>
+          .map((el, index) => (
+            <div key={index} className={classes["dot"]}></div>
           ))}
       </div>
     </>
