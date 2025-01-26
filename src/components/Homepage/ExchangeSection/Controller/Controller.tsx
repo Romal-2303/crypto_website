@@ -45,6 +45,9 @@ const Controller = () => {
           </div>
         </div>
         <div className={classes["card-container"]}>
+          <div className={classes["card-morphism"]}></div>
+          <div className={classes["card-morphism"]}></div>
+          <div className={classes["vertical-white-strip"]}></div>
           <Wallet color="white" />
           <p className={classes["card-title"]}>Balance</p>
           <p className={classes["card-balance"]}>$14,53,800.92</p>

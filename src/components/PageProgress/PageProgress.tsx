@@ -35,8 +35,6 @@ const PageProgress = () => {
     };
   }, []);
 
-  console.log(scrollPercentage);
-
   return (
     <div className={classes["progress-bar"]} style={{ height: pageHeight }}>
       <div
