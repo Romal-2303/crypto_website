@@ -1,0 +1,24 @@
+.progress-bar {
+  position: absolute;
+  top: 0;
+  right: 0.8rem;
+  width: 1px;
+  transition: all linear 0.5s;
+
+  .filled-bar {
+    width: 100%;
+    background-color: white;
+    position: relative;
+    transition: all linear 0.5s;
+
+    .end-block {
+      position: absolute;
+      right: -2px;
+      bottom: 0;
+      height: 5px;
+      width: 5px;
+      background-color: white;
+      //   border-radius: 50%;
+    }
+  }
+}
