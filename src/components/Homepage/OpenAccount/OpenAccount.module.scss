@@ -1,0 +1,54 @@
+@use "../../../designSystem/library" as *;
+
+
+.open-account-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    font-family: $font-secondary;
+
+
+
+    .left-container,
+    .right-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-container {
+        font-size: 50px;
+        line-height: 70px;
+
+    }
+
+
+
+
+    .right-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .heading {
+            color: #9a9a9a;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-bottom: -30px;
+            word-spacing: 2px;
+        }
+
+        .image-conatiner {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
+
+
+        }
+    }
+
+}
