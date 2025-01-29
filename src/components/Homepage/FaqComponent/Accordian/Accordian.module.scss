@@ -1,0 +1,54 @@
+@use "@/designSystem/library" as *;
+
+
+
+.accordion {
+    height: 100%;
+    font-family: $font-primary;
+    overflow: hidden;
+
+    &-item {
+        border-bottom: 0.5px solid #6b6b6b;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &-header {
+        padding: 20px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        color: #d6d4d4;
+
+        .title {
+
+            word-spacing: 4px;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .icon {
+            font-size: 10px;
+            transition: transform 0.3s;
+
+            &.open {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &-content {
+        padding: 16px;
+        color: #555;
+        font-size: 14px;
+        display: none;
+        line-height: 22px;
+
+        &.open {
+            display: block;
+        }
+    }
+}
